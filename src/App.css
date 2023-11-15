@@ -1,0 +1,9 @@
+.barre {
+    text-decoration: line-through;
+}
+
+.tache {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
