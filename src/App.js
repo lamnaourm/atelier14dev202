@@ -5,8 +5,10 @@ import ListTasks from './components/ListTasks';
 function App() {
   return (
     <div className="container">
-      <AddTache />
-      <ListTasks />
+      <div>
+        <AddTache />
+        <ListTasks />
+      </div>
     </div>
   );
 }

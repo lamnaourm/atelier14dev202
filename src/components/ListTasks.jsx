@@ -6,7 +6,7 @@ export default function ListTasks() {
 
     const taches = useSelector(state => state.tasks)
     return (
-        <div>
+        <div className='list'>
             {taches.map(t => <Task key={t.id} tache={t} />)}
         </div>
     )

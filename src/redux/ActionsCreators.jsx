@@ -6,3 +6,17 @@ export const addTache = (text) => {
         payload:text
     }
 }
+
+export const deleteTache = (id) => {
+    return {
+        type: Types.DELETE_TACHE,
+        payload:id
+    }
+}
+
+export const modifTache = (id) => {
+    return {
+        type: Types.MODIF_TACHE,
+        payload:id
+    }
+}
