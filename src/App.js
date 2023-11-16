@@ -7,6 +7,7 @@ function App() {
     <div className="container">
       <div>
         <AddTache />
+        <hr/>
         <ListTasks />
       </div>
     </div>
