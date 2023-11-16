@@ -24,16 +24,25 @@ const initial_state = {
 const ReducerTodo = (state = initial_state, action) => {
     let newState = { ...state }
 
-    switch(action.type) {
-        case Types.ADD_TACHE: 
-            newState.tasks = [...newState.tasks, {id:uuid(), task:action.payload, completed: false}]
-        break;
+    switch (action.type) {
+        case Types.ADD_TACHE:
+            newState.tasks = [...newState.tasks, { id: uuid(), task: action.payload, completed: false }]
+            break;
         case Types.DELETE_TACHE:
             newState.tasks = newState.tasks.filter(t => t.id != action.payload)
-        break;
+            break;
         case Types.MODIF_TACHE:
-            newState.tasks = newState.tasks.map(t => t.id == action.payload ? {...t,completed:!t.completed}:t)
-        break;
+            newState.tasks = newState.tasks.map(t => t.id == action.payload ? { ...t, completed: !t.completed } : t)
+            break;
+        case Types.DELETE_ALL:
+            newState.tasks = []
+            break;
+        case Types.DELETE_TERMINE:
+            newState.tasks = newState.tasks.filter(t => !t.completed)
+            break;
+        case Types.DELETE_NOTERMINE:
+            newState.tasks = newState.tasks.filter(t => t.completed)
+            break;
     }
     return newState;
 }

@@ -1,6 +1,8 @@
 import './App.css';
 import AddTache from './components/AddTache';
 import ListTasks from './components/ListTasks';
+import Operations from './components/Operations';
+import StatsTodo from './components/StatsTodo';
 
 function App() {
   return (
@@ -9,6 +11,10 @@ function App() {
         <AddTache />
         <hr/>
         <ListTasks />
+        <hr />
+        <Operations />
+        <hr />
+        <StatsTodo />
       </div>
     </div>
   );
